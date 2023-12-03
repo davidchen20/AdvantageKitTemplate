@@ -17,7 +17,7 @@ public class Intake extends SubsystemBase {
   /** Creates a new Intake. */
   // TODO: implement this constructor to instantiate the pivot and roller objects
   // Params: fill in the function parameters as needed by the implementation above
-  public Intake(IntakePivotIO pivot, IntakeRollerIO roller) {
+  public Intake(<REPLACE_WITH_PARAMS>) {
     throw Error("Not Implemented Yet"); // remove this line when you start
   }
 

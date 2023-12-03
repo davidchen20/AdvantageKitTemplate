@@ -42,11 +42,7 @@ public class IntakePivotIOTalonFX implements IntakePivotIO{
     // Params: object of IntakePivotIOInputs 
     // Return: this function returns void
     public void updateInputs(IntakePivotIOInputs inputs) {
-        inputs.pivotPosition = Units.rotationsToDegrees(pivotPosition.getValueAsDouble());
-        inputs.pivotVelocity = Units.rotationsPerMinuteToRadiansPerSecond(pivotVelocity.getValueAsDouble());
-
-        inputs.appliedVolts = appliedVolts.getValueAsDouble();
-        inputs.currentAmps = currentAmps.getValueAsDouble();
+        throw Error("Not Implemented Yet") // remove this line when you start
     }
 
     @Override
