@@ -17,7 +17,7 @@ public class Intake extends SubsystemBase {
   /** Creates a new Intake. */
   // TODO: implement this constructor to instantiate the pivot and roller objects
   // Params: fill in the function parameters as needed by the implementation above
-  public Intake(<REPLACE_WITH_PARAMS>) {
+  public Intake(IntakePivotIOInputs pivot, IntakeRollerIOInputs roller) {
     throw Error("Not Implemented Yet"); // remove this line when you start
   }
 
@@ -35,7 +35,8 @@ public class Intake extends SubsystemBase {
   // Param: velocity of rollers
   // Return: this function returns void
   public void runRollers(double velocity) {
-    throw Error("Not Implemented Yet"); // remove this line when you start
+    //throw Error("Not Implemented Yet"); // remove this line when you start
+    roller.setVelocity(velocity);
   }
 
   // TODO: implement this function to stop the rollers
