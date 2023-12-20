@@ -69,7 +69,7 @@ public class IntakeRollerIOTalonFX implements IntakeRollerIO {
     @Override
     public void stop() {
 <<<<<<< Updated upstream
-        throw Error("Not Implemented Yet") // remove this line when you start
+
         falcon.setVelocity(0);
 =======
         falcon.stopMotor();
