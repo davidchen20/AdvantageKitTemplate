@@ -38,35 +38,31 @@ public class IntakePivotIOTalonFX implements IntakePivotIO{
     }
 
     @Override
-    // TODO: implement this function the update all the attributes of the IntakePivotIOInputs object passed in
-    // Params: object of IntakePivotIOInputs 
-    // Return: this function returns void
+
     public void updateInputs(IntakePivotIOInputs inputs) {
-        throw Error("Not Implemented Yet") // remove this line when you start
+
+        inputs.pivotPosition = this.pivotPosition;
+        inputs.pivotVelocity = this.pivotVelocity;
+        inputs.appliedVolts = this.appliedVolts;
+        inputs.currentAmps = this.currentAmps;
     }
 
     @Override
-    // TODO: implement this function to set the pivot motor to move to a given positional value
-    // Params: fill in the function parameters as need by the implementation above
-    // Return: this function returns void
-    public void setPosition(<REPLACE_WITH_PARAM>) {
-        throw Error("Not Implemented Yet") // remove this line when you start
+
+    public void setPosition(double position) {
+        falcon.set(Position position);
+
+
     }
 
     @Override 
-    // TODO: implement this function to set the pivot motor to move to a given velocity
-    // Params: fill in the function parameters as need by the implementation above
-    // Return: this function returns void
-    public void setVelocity(<REPLACE_WITH_PARAM>) {
-        throw Error("Not Implemented Yet") // remove this line when you start
+    public void setVelocity(double velocity) {
+        falcon.set(Velocity velocity);
     }
 
     @Override
-    // TODO: implement this function to stop the pivot motor
-    // Params: none
-    // Return: this function returns void
     public void stop() {
-        throw Error("Not Implemented Yet") // remove this line when you start
+        falcon.set(0);
     }
 
     @Override
