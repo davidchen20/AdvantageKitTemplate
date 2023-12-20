@@ -18,7 +18,11 @@ public class IntakeRollerIOTalonFX implements IntakeRollerIO {
     private final StatusSignal<Double> currentAmps;
     
     // Param: ID for roller motor
+<<<<<<< Updated upstream
     public IntakeRollerIOTalonFX(double id) {
+=======
+    public IntakeRollerIOTalonFX(int id) {
+>>>>>>> Stashed changes
         TalonFXConfiguration config = new TalonFXConfiguration();
         config.CurrentLimits.StatorCurrentLimit = 30;
         config.CurrentLimits.StatorCurrentLimitEnable = true;
@@ -38,22 +42,38 @@ public class IntakeRollerIOTalonFX implements IntakeRollerIO {
 
     @Override
     public void updateInputs(IntakeRollerIOInputs inputs) {
+<<<<<<< Updated upstream
         inputs.pivotPosition = this.pivotPosition;
         inputs.pivotVelocity = this.pivotVelocity;
+=======
+        inputs.rollerVelocity = this.rollerVelocity;
+>>>>>>> Stashed changes
         inputs.appliedVolts = this.appliedVolts;
         inputs.currentAmps = this.currentAmps;
     }
 
     @Override 
+<<<<<<< Updated upstream
 
     public void setVelocity(double velocity) {
         falcon.setVelocity(velocity);
+=======
+    // TODO: implement this function to set the pivot motor to move to a given velocity
+    // Params: fill in the function parameters as need by the implementation above
+    // Return: this function returns void
+    public void setVelocity(double velocity) {
+        falcon.set(velocity);
+>>>>>>> Stashed changes
     }
 
     @Override
     public void stop() {
+<<<<<<< Updated upstream
         throw Error("Not Implemented Yet") // remove this line when you start
         falcon.setVelocity(0);
+=======
+        falcon.stopMotor();
+>>>>>>> Stashed changes
     }
 
     @Override

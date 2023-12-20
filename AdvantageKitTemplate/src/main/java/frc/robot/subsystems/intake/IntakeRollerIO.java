@@ -2,13 +2,15 @@ package frc.robot.subsystems.intake;
 
 import org.littletonrobotics.junction.AutoLog;
 
+import com.ctre.phoenix6.StatusSignal;
+
 public interface IntakeRollerIO {
     @AutoLog
     public static class IntakeRollerIOInputs {
-        public double rollerVelocity = 0.0;
-        public double appliedVolts = 0.0;
+        public StatusSignal<Double> rollerVelocity = 0.0;
+        public StatusSignal<Double> appliedVolts = 0.0;
 
-        public double currentAmps = 0.0;
+        public StatusSignal<Double> currentAmps = 0.0;
     }
 
     public default void updateInputs(IntakeRollerIOInputs inputs) {}

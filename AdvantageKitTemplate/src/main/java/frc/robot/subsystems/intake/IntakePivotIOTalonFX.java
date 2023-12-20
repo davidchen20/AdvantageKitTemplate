@@ -38,13 +38,18 @@ public class IntakePivotIOTalonFX implements IntakePivotIO{
     }
 
     @Override
+<<<<<<< Updated upstream
 
     public void updateInputs(IntakePivotIOInputs inputs) {
 
+=======
+    public void updateInputs(IntakePivotIOInputs inputs) {
+>>>>>>> Stashed changes
         inputs.pivotPosition = this.pivotPosition;
         inputs.pivotVelocity = this.pivotVelocity;
         inputs.appliedVolts = this.appliedVolts;
         inputs.currentAmps = this.currentAmps;
+<<<<<<< Updated upstream
     }
 
     @Override
@@ -53,16 +58,37 @@ public class IntakePivotIOTalonFX implements IntakePivotIO{
         falcon.set(Position position);
 
 
+=======
+        
+
+
+    }
+
+    @Override
+    // TODO: implement this function to set the pivot motor to move to a given positional value
+    // Params: fill in the function parameters as need by the implementation above
+    // Return: this function returns void
+    public void setPosition(double position) {
+        falcon.set(position);
+>>>>>>> Stashed changes
     }
 
     @Override 
     public void setVelocity(double velocity) {
+<<<<<<< Updated upstream
         falcon.set(Velocity velocity);
+=======
+        falcon.set(velocity);
+>>>>>>> Stashed changes
     }
 
     @Override
     public void stop() {
+<<<<<<< Updated upstream
         falcon.set(0);
+=======
+        falcon.stopMotor();
+>>>>>>> Stashed changes
     }
 
     @Override

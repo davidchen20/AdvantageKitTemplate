@@ -5,6 +5,7 @@
 package frc.robot.subsystems.intake;
 
 import org.littletonrobotics.junction.Logger;
+import org.littletonrobotics.junction.inputs.LoggableInputs;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -14,8 +15,15 @@ public class Intake extends SubsystemBase {
   private final IntakePivotIOInputsAutoLogged pInputs = new IntakePivotIOInputsAutoLogged();
   private final IntakeRollerIOInputsAutoLogged rInputs = new IntakeRollerIOInputsAutoLogged();
   
+<<<<<<< Updated upstream
 
   public Intake(IntakePivotIOInputs pivot, IntakeRollerIOInputs roller) {
+=======
+  /** Creates a new Intake. */
+  // TODO: implement this constructor to instantiate the pivot and roller objects
+  // Params: fill in the function parameters as needed by the implementation above
+  public Intake(IntakePivotIO pivot, IntakeRollerIO roller) {
+>>>>>>> Stashed changes
     this.pivot = pivot;
     this.roller = roller;
   }
@@ -32,15 +40,23 @@ public class Intake extends SubsystemBase {
 
   
   public void runRollers(double velocity) {
+<<<<<<< Updated upstream
    
+=======
+>>>>>>> Stashed changes
     roller.setVelocity(velocity);
   }
 
   public void stopRollers() {
+<<<<<<< Updated upstream
     rollers.setVelocity(0);
+=======
+    roller.setVelocity(0);
+>>>>>>> Stashed changes
   }
 
   public void stopPivot() {
+<<<<<<< Updated upstream
 
     pivot.setVelocity(0);
   }
@@ -48,5 +64,18 @@ public class Intake extends SubsystemBase {
   public void setPosition(double position) {
     pivot.setPosition(position);
     Logger.processInputs("Pivot Position: ", position);
+=======
+    pivot.setVelocity(0);
+  
+  }
+
+  // TODO: implement this function to set the position of the pivot motor to a given position value then Log the target
+  //       position value (see periodic function for hint on how to log)
+  // Param: the position the pivot will be set to
+  // Return: this function returns void
+  public void setPosition(LoggableInputs position) {
+    pivot.setPosition(position);
+    Logger.processInputs("PivotPosition", position);
+>>>>>>> Stashed changes
   }
 }
